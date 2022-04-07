@@ -1,0 +1,6 @@
+ubuntu@ubuntu:~/Desktop/bkp/Assignment2$ sh leapyear.sh 
+Enter year (YYYY): 2024
+2024 is leap year
+ubuntu@ubuntu:~/Desktop/bkp/Assignment2$ sh leapyear.sh 
+Enter year (YYYY): 2021
+2021 is not a leap year
