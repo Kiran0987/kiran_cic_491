@@ -1,3 +1,4 @@
+declare -A
 read a  
 read b
 read c
@@ -9,3 +10,7 @@ echo $d
 echo $e
 echo $f
 echo $g
+echo ${d[@]};
+echo ${e[@]};
+echo ${f[@]};
+echo ${g[@]};
