@@ -1,0 +1,36 @@
+ubuntu@ubuntu:~/Desktop/Assignment1$ sh movefile.sh 
++ touch abc.txt def.txt ghi.txt jkl.txt
++ mkdir abc
++ mkdir def
++ mkdir ghi
++ mkdir jkl
++ mv abc.txt abc
++ mv def.txt def
++ mv ghi.txt ghi
++ mv jkl.txt jkl
++ ls -ltr abc
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 00:22 abc.txt
++ ls -ltr def
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 00:22 def.txt
++ ls -ltr ghi
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 00:22 ghi.txt
++ ls -lrt jkl
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 00:22 jkl.txt
++ tree /home/ubuntu/Desktop/Assignment1
+/home/ubuntu/Desktop/Assignment1
+├── abc
+│   └── abc.txt
+├── Day3.pdf
+├── def
+│   └── def.txt
+├── ghi
+│   └── ghi.txt
+├── jkl
+│   └── jkl.txt
+└── movefile.sh
+
+4 directories, 6 files

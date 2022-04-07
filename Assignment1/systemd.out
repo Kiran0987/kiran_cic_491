@@ -1,0 +1,4 @@
+ubuntu@ubuntu:/var/log$ grep "systemd" /var/log/*.log | wc -l
+grep: /var/log/ubuntu-advantage.log: Permission denied
+grep: /var/log/ubuntu-advantage-timer.log: Permission denied
+233

@@ -1,0 +1,5 @@
+ubuntu@ubuntu:~/Desktop/Assignment1$ sh display.sh 
+    PID    PPID CMD                         %MEM %CPU
+   7374    5199 /usr/bin/bash                0.0  0.0
+  15026    7374 sh display.sh                0.0  0.0
+  15027   15026 ps -o pid,ppid,cmd,%mem,%cp  0.0  0.0

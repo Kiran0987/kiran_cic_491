@@ -1,0 +1,11 @@
+ubuntu@ubuntu:~/Desktop/Assignment1$ sh folder_check.sh 
++ mkdir testfolder
++ grep ^d
++ ls -lrt
++ grep testfolder
++ dir_check=drwxrwxr-x 2 ubuntu ubuntu    4096 Apr  2 14:38 testfolder
++ [[ -z drwxrwxr-x 2 ubuntu ubuntu 4096 Apr 2 14:38 testfolder ]]
+folder_check.sh: 14: [[: not found
++ echo Folder already exists
+Folder already exists
++ rm -rf /home/ubuntu/Desktop/Assigment1/testfolder/

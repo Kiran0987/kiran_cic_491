@@ -1,0 +1,18 @@
+ubuntu@ubuntu:~/Desktop/Assignment1$ sh diff_dir.sh 
++ mkdir original updated
+mkdir: cannot create directory ‘original’: File exists
+mkdir: cannot create directory ‘updated’: File exists
++ cd /home/ubuntu/Desktop/Assignment1/original
++ touch original-file.sh
++ cd /home/ubuntu/Desktop/Assignment1/updated
++ touch updated-file.sh
++ diff /home/ubuntu/Desktop/Assignment1/original /home/ubuntu/Desktop/Assignment1/updated
+Only in /home/ubuntu/Desktop/Assignment1/original: original-file.sh
+Only in /home/ubuntu/Desktop/Assignment1/updated: updated-file.sh
++ cp original original-backup
+cp: cannot stat 'original': No such file or directory
++ echo this is old test file
++ diff /home/ubuntu/Desktop/Assignment1/original /home/ubuntu/Desktop/Assignment1/updated
+Only in /home/ubuntu/Desktop/Assignment1/original: original-file.sh
+Only in /home/ubuntu/Desktop/Assignment1/updated: updated-file.sh
++ rm -rf original updated original-backup

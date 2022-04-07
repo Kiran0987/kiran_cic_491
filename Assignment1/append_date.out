@@ -1,0 +1,29 @@
+ubuntu@ubuntu:~/Desktop/Assignment1$ sh append_date.sh 
++ date +%m%d%y
++ DATE=040222
++ touch abc.log.1 def.log.1 ghi.log.1 jkl.log.1 mno.log.1
++ ls -ltr abc.log.1 def.log.1 ghi.log.1 jkl.log.1 mno.log.1
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 mno.log.1
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 jkl.log.1
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 ghi.log.1
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 def.log.1
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 abc.log.1
++ mkdir current_date
++ mv abc.log.1 def.log.1 ghi.log.1 jkl.log.1 mno.log.1 current_date
++ 040222
+append_date.sh: 22: 040222: not found
++ cd current_date
++ mv abc.log.1 abc-040222.log
++ mv def.log.1 def-040222.log
++ mv ghi.log.1 ghi-040222.log
++ mv jkl.log.1 jkl-040222.log
++ mv mno.log.1 mno-040222.log
++ ls -ltr /home/ubuntu/Desktop/Assignment1/current_date/
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 mno-040222.log
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 jkl-040222.log
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 ghi-040222.log
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 def-040222.log
+-rw-rw-r-- 1 ubuntu ubuntu 0 Apr  2 13:19 abc-040222.log
++ cd /home/ubuntu/Desktop/Assignment1
++ rm -rf current_date

@@ -1,0 +1,27 @@
+ubuntu@ubuntu:~/Desktop/Assignment1$ sh archivefile.sh 
++ mkdir arch_backup
+mkdir: cannot create directory ‘arch_backup’: File exists
++ find /var/log/ -mtime +7
+find: ‘/var/log/gdm3’: Permission denied
+find: ‘/var/log/private’: Permission denied
+find: ‘/var/log/speech-dispatcher’: Permission denied
++ cat /home/ubuntu/Desktop/Assignment1/arch_backup/archive7.out
+/var/log/openvpn
+/var/log/hp
+/var/log/hp/tmp
+/var/log/bootstrap.log
+/var/log/gdm3
+/var/log/ubuntu-advantage.log
+/var/log/dist-upgrade
+/var/log/private
+/var/log/speech-dispatcher
++ find /var/log/ -mtime +7 -type f -exec cp {} /home/ubuntu/Desktop/Assignment1/arch_backup/ ;
+find: ‘/var/log/gdm3’: Permission denied
+cp: cannot open '/var/log/ubuntu-advantage.log' for reading: Permission denied
+find: ‘/var/log/private’: Permission denied
+find: ‘/var/log/speech-dispatcher’: Permission denied
++ ls -ltr /home/ubuntu/Desktop/Assignment1/arch_backup/
+total 108
+-rw-rw-r-- 1 ubuntu ubuntu    178 Apr  2 14:28 archive7.out
+-rw-r--r-- 1 ubuntu ubuntu 104003 Apr  2 14:28 bootstrap.log
++ rm -rf /home/ubuntu/Desktop/Assignment1/arch_backup/

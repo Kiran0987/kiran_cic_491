@@ -1,0 +1,6 @@
+ubuntu@ubuntu:~/Desktop/Assignment1$ sh exec_hello.sh 
+Hello, world!
+command is executed successfully
+append_date.out  archivefile.out  Day3.pdf       folder_check.out  movefile.out  testfolder
+append_date.sh   archivefile.sh   exec_hello.sh  folder_check.sh   movefile.sh
+command is executed successfully
