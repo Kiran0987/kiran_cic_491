@@ -24,6 +24,7 @@ j=`expr $j + 1`
 done
 if [ $flag -eq 0 ];
 then
+echo "prime factors"
 echo "[ $factor ]"
 count=1
 fi
