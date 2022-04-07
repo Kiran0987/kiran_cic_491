@@ -1,3 +1,4 @@
+#range from 0-100,find repeted digits like 33,44
 set -x
  for (( i=1; i<=100; i++))
 do 

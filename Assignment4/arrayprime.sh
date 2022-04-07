@@ -1,3 +1,4 @@
+#prime factorization program to store all prime factors
 echo "enter a number:"
 read input
 if [ $input -lt 1 ];

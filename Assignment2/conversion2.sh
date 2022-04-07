@@ -1,4 +1,4 @@
-echo " enter a number "
+echo " enter a number from given sequence (1,10,100,1000) "
  read n
 case $n in
  1) echo "unit" ;;
