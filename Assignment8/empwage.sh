@@ -26,8 +26,10 @@ while [[ $totalworkingDays -lt $MaxWorkingDays && $totalworkingHrs -lt $MaxWorki
 do
        workingHrs="$( empWorkingHrs $((RANDOM%3)) )"
         echo $workingHrs;
+        DailyWage[(($totalworkingDays))]=$(($empRatePerHr*$workingHrs));
           totalworkingDays=$(($totalworkingDays+1));
            totalworkinhHrs=$(($totalworkingHrs+$workingHrs))
 done
 salaryPerMonth=$(($empRatePerHr*$totalworkingHrs));
 echo $salaryPerMonth;
+echo $DailyWage;
