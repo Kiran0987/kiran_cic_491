@@ -1,8 +1,13 @@
 isPresent=1;
-randomNo=$((RANDOM%2));
-if [ $isPresent -eq $randomNo ]
+empNo=$((RANDOM%2));
+if [ $isPresent -eq $empNo ]
 then
-echo "Employee is present";
+empRatePerHr=20;
+empHrs=8;
+salary=$(($empRatePerHr*$empHrs));
+#echo "Employee is present";
 else
-echo "Employee is absent";
+salary=0;
+#echo "Employee is absent";
 fi
+echo $salary;
