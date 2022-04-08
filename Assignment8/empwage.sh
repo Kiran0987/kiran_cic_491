@@ -1,13 +1,19 @@
-isPresent=1;
-empNo=$((RANDOM%2));
-if [ $isPresent -eq $empNo ]
-then
+isPartTime=1;
+isFullTime=2
+empNo=$((RANDOM%3));
 empRatePerHr=20;
+if [ $isFullTime -eq $empNo ]
+then
+
 empHrs=8;
-salary=$(($empRatePerHr*$empHrs));
-#echo "Employee is present";
+
+
+elif [ $isPartTime -eq $empNo ];
+then
+empHrs=4;
 else
-salary=0;
-#echo "Employee is absent";
+empHrs=0;
+
 fi
+salary=$(($empRatePerHr*$empHrs));
 echo $salary;
