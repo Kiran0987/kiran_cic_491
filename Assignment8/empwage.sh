@@ -15,6 +15,7 @@ do
 
 		empHrs=0;;
 esac
-       salary=$(($empRatePerHr * $empHrs))
+       salaryPerDay=$(($empRatePerHr * $empHrs))
+       
 done
-echo $salary;
+echo $salaryPerDay;
