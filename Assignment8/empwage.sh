@@ -1,20 +1,17 @@
 isPartTime=1;
 isFullTime=2
-MaxworkingDays=20;
+MaxWorkingDays=20;
 empRatePerHr=20;
 totalworkingHrs=0;
-MaxworkingHrs=100;
-salaryperMonth=0;
+totalworkingDays=0;
+MaxWorkingHrs=100;
+salaryPerMonth=0;
 isRunning=true;
-count=1;
-while [ $isRunning ];
-do 
-  
-         if [ $count -gt 20 ];then
-break;
-       fi
-       empNo=$((RANDOM%3))
-       case $empNo in
+
+function empWorkingHrs() {
+      
+       
+       case $1 in
 	$isFullTime)
 		empHrs=8;;
 	$isPartTime)
@@ -23,9 +20,14 @@ break;
 
 		empHrs=0;;
 esac
-       salaryPerDay=$(($empRatePerHr * $empHrs))
-       salaryPerMonth=$(($salaryPerMonth+$salaryPerDay))
-       count=$(($count+1));
+          echo $empHrs;
+}
+while [[ $totalworkingDays -lt $MaxWorkingDays && $totalworkingHrs -lt $MaxWorkingHrs ]]
+do
+       workingHrs="$( empWorkingHrs $((RANDOM%3)) )"
+        echo $workingHrs;
+          totalworkingDays=$(($totalworkingDays+1));
+           totalworkinhHrs=$(($totalworkingHrs+$workingHrs))
 done
-echo $salaryPerDay;
+salaryPerMonth=$(($empRatePerHr*$totalworkingHrs));
 echo $salaryPerMonth;
