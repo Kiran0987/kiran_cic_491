@@ -1,8 +1,12 @@
 isPartTime=1;
 isFullTime=2
-empNo=$((RANDOM%3));
+
 empRatePerHr=20;
-case $empNo in
+workingDays=20;
+for (( counter=1; counter<=$workingDays; counter++ ));
+do
+       empNo=$((RANDOM%3))
+       case $empNo in
 	$isFullTime)
 		empHrs=8;;
 	$isPartTime)
@@ -11,5 +15,6 @@ case $empNo in
 
 		empHrs=0;;
 esac
-salary=$(($empRatePerHr * $empHrs))
+       salary=$(($empRatePerHr * $empHrs))
+done
 echo $salary;
